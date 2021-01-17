@@ -20,8 +20,8 @@
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_HEADS, ACCESS_EVA, ACCESS_CONSTRUCTION, ACCESS_MINERAL_STOREROOM, ACCESS_MUNITIONS, ACCESS_MAA, ACCESS_MUNITIONS_STORAGE, ACCESS_FIGHTER, ACCESS_FL, ACCESS_RC_ANNOUNCE)
 	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_HEADS, ACCESS_EVA, ACCESS_CONSTRUCTION, ACCESS_MINERAL_STOREROOM, ACCESS_MUNITIONS, ACCESS_MAA, ACCESS_MUNITIONS_STORAGE, ACCESS_FIGHTER, ACCESS_FL, ACCESS_RC_ANNOUNCE)
 	paycheck = PAYCHECK_HARD
-	paycheck_department = ACCOUNT_SEC
-
+	paycheck_department = ACCOUNT_MUN
+	mind_traits = list(TRAIT_MUNITIONS_METABOLISM)
 	display_order = JOB_DISPLAY_ORDER_MASTER_AT_ARMS
 	display_rank = "WO" //nsv13 - Displays the player's actual rank alongside their name, such as GSGT Sergei Koralev
 
@@ -45,9 +45,9 @@
 	l_pocket = /obj/item/pda
 	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1)
 
-	backpack = /obj/item/storage/backpack/security
-	satchel = /obj/item/storage/backpack/satchel/sec
-	duffelbag = /obj/item/storage/backpack/duffelbag/sec
+	backpack = /obj/item/storage/backpack/munitions
+	satchel = /obj/item/storage/backpack/satchel/munitions
+	duffelbag = /obj/item/storage/backpack/duffelbag/munitions
 	box = /obj/item/storage/box/security
 
 	pda_slot = SLOT_L_STORE
