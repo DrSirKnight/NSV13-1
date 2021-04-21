@@ -4,6 +4,10 @@
 	icon_state = "standard"
 	desc = "A fairly standard torpedo which is designed to cause massive structural damage to a target. It is fitted with a basic homing mechanism to ensure it always hits the mark."
 	density = TRUE
+	climbable = TRUE //No shenanigans
+	climb_time = 40
+	climb_stun = 5
+	w_class = WEIGHT_CLASS_GIGANTIC
 	move_resist = MOVE_FORCE_EXTREMELY_STRONG
 	interaction_flags_item = 0 // -INTERACT_ITEM_ATTACK_HAND_PICKUP
 	projectile_type = /obj/item/projectile/guided_munition/torpedo //What torpedo type we fire
@@ -197,11 +201,11 @@
 	if(empty_turfs?.len)
 		LZ = pick(empty_turfs)
 	var/obj/structure/closet/supplypod/freight_pod/toLaunch = new /obj/structure/closet/supplypod/freight_pod
-	var/shippingLane = GLOB.areas_by_type[/area/centcom/supplypod/flyMeToTheMoon]
+	var/shippingLane = GLOB.areas_by_type[/area/centcom/supplypod/supplypod_temp_holding]
 	toLaunch.forceMove(shippingLane)
 	for (var/atom/movable/O in contents)
 		O.forceMove(toLaunch) //forceMove any atom/moveable into the supplypod
-		new /obj/effect/DPtarget(LZ, toLaunch)
+		new /obj/effect/pod_landingzone(LZ, toLaunch)
 	qdel(src)
 
 /obj/item/projectile/guided_munition/torpedo/post/Destroy()

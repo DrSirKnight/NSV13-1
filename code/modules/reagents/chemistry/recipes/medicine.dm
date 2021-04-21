@@ -219,7 +219,7 @@
 	name = "Dexalin"
 	id = "dexalin"
 	results = list(/datum/reagent/medicine/dexalin = 5)
-	required_reagents = list(/datum/reagent/oxygen = 5)
+	required_reagents = list(/datum/reagent/oxygen = 5, /datum/reagent/nitrogen = 5)
 	required_catalysts = list(/datum/reagent/toxin/plasma = 5)
 
 /datum/chemical_reaction/dexalinp
@@ -251,6 +251,12 @@
 	id = /datum/reagent/medicine/regen_jelly
 	results = list(/datum/reagent/medicine/regen_jelly = 2)
 	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/toxin/slimejelly = 1)
+
+/datum/chemical_reaction/regen_ooze
+	name = "Regenerative Ooze"
+	id = /datum/reagent/medicine/regen_ooze
+	results = list(/datum/reagent/medicine/regen_ooze = 2)
+	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/toxin/slimeooze = 1)
 
 /datum/chemical_reaction/corazone
 	name = "Corazone"
@@ -291,6 +297,12 @@
 	required_reagents = list(/datum/reagent/consumable/ethanol = 1, /datum/reagent/copper = 1, /datum/reagent/silver = 1)
 	required_temp = 370
 	mix_message = "The mixture becomes a metallic slurry."
+
+/datum/chemical_reaction/radioactive_disinfectant
+	name = "Radioactive Disinfectant"
+	id = /datum/reagent/medicine/radioactive_disinfectant
+	results = list(/datum/reagent/medicine/radioactive_disinfectant = 5)
+	required_reagents = list(/datum/reagent/consumable/ethanol = 5, /datum/reagent/phenol = 1, /datum/reagent/iodine = 1, /datum/reagent/water = 1)
 
 /datum/chemical_reaction/carthatoline
 	name = "Carthatoline"
